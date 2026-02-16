@@ -82,6 +82,9 @@ npm install
 ```
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Optional: Google Sheets for Join form (see Google Sheets Setup below)
+VITE_GOOGLE_SHEETS_WEB_APP_URL=your_web_app_url
 ```
 
 3. Run the development server:
@@ -93,6 +96,21 @@ npm run dev
 ```bash
 npm run build
 ```
+
+### Google Sheets Setup (Join Form)
+
+To save Join form submissions (name + contact number) to your [Google Sheet](https://docs.google.com/spreadsheets/d/13BB78AX_kX7grN8mwTSSDCjbOAZoKXsqOuMgRCVXXQs/edit):
+
+1. Open the sheet and add **"Contact Number"** in cell B1 (A1 has "Name").
+2. Go to **Extensions** → **Apps Script**.
+3. Copy the code from `google-apps-script/Code.gs` into the editor.
+4. **Save** and **Deploy** → New deployment → **Web app** (Execute as: Me, Who has access: Anyone).
+5. Copy the web app URL and add to `.env`:
+   ```
+   VITE_GOOGLE_SHEETS_WEB_APP_URL=https://script.google.com/macros/s/.../exec
+   ```
+
+When configured, form submissions append rows to your sheet. Otherwise they use Supabase (join_registrations table).
 
 ## Key Features Implemented
 

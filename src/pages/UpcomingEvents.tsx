@@ -1,7 +1,29 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { Event } from '../types';
-import { Calendar, MapPin, Clock, Filter, Mail, ArrowRight } from 'lucide-react';
+import { Calendar, MapPin, Clock, Filter, Mail } from 'lucide-react';
+
+const STATIC_EVENTS: Event[] = [
+  {
+    id: 'shivohum-shiv-mela-2026',
+    title: 'SHIVOHUM SHIV MELA',
+    date: '2026-02-21',
+    time: '12:30 PM - 4:30 PM',
+    venue: "Tudor Park Sports & Leisure, Browell's Lane, FELTHAM, TW13 7EF",
+    description:
+      'Join Sanatan Spirituality Foundation for Shivohum Shiv Mela — a devotional gathering celebrating Lord Shiva with bhajans, darshan, and community.',
+    category: 'Festival',
+    image_url: '/shivohum-shiv-mela.png',
+    registration_link: '',
+    is_featured: true,
+    status: 'upcoming',
+    created_at: '2026-02-16T00:00:00Z',
+  },
+];
+
+function sortEventsByDate(a: Event, b: Event) {
+  return new Date(a.date).getTime() - new Date(b.date).getTime();
+}
 
 export default function UpcomingEvents() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -26,6 +48,12 @@ export default function UpcomingEvents() {
   }, [selectedCategory, events]);
 
   const fetchEvents = async () => {
+    if (!supabase) {
+      setEvents(STATIC_EVENTS);
+      setFilteredEvents(STATIC_EVENTS);
+      setLoading(false);
+      return;
+    }
     try {
       const { data, error } = await supabase
         .from('events')
@@ -34,12 +62,13 @@ export default function UpcomingEvents() {
         .order('date', { ascending: true });
 
       if (error) throw error;
-      if (data) {
-        setEvents(data);
-        setFilteredEvents(data);
-      }
+      const merged = [...STATIC_EVENTS, ...(data || [])].sort(sortEventsByDate);
+      setEvents(merged);
+      setFilteredEvents(merged);
     } catch (error) {
       console.error('Error fetching events:', error);
+      setEvents(STATIC_EVENTS);
+      setFilteredEvents(STATIC_EVENTS);
     } finally {
       setLoading(false);
     }
@@ -47,6 +76,11 @@ export default function UpcomingEvents() {
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!supabase) {
+      setSubscribeMessage('Newsletter signup is not available yet.');
+      setTimeout(() => setSubscribeMessage(''), 5000);
+      return;
+    }
     try {
       const { error } = await supabase
         .from('newsletter_subscribers')
@@ -92,7 +126,7 @@ export default function UpcomingEvents() {
     <div className="min-h-screen bg-black pt-20">
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-center text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-4">
             Upcoming Events
           </h1>
           <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-8" />
@@ -118,30 +152,26 @@ export default function UpcomingEvents() {
                     Featured
                   </div>
                 </div>
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
                   <div className="inline-block bg-[#FF6B00]/20 text-[#FF6B00] px-4 py-1 rounded-full text-sm font-semibold mb-4 self-start">
                     {featuredEvent.category}
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-4">{featuredEvent.title}</h3>
-                  <p className="text-gray-300 mb-6">{featuredEvent.description}</p>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center space-x-3 text-gray-300">
-                      <Calendar className="text-[#FF6B00]" size={20} />
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 break-words">{featuredEvent.title}</h3>
+                  <p className="text-gray-300 mb-6 text-sm sm:text-base">{featuredEvent.description}</p>
+                  <div className="space-y-3 mb-6 min-w-0 break-words">
+                    <div className="flex items-center space-x-3 text-gray-300 text-sm sm:text-base">
+                      <Calendar className="text-[#FF6B00] flex-shrink-0" size={20} />
                       <span>{formatDate(featuredEvent.date)}</span>
                     </div>
-                    <div className="flex items-center space-x-3 text-gray-300">
-                      <Clock className="text-[#FF6B00]" size={20} />
+                    <div className="flex items-center space-x-3 text-gray-300 text-sm sm:text-base">
+                      <Clock className="text-[#FF6B00] flex-shrink-0" size={20} />
                       <span>{featuredEvent.time}</span>
                     </div>
-                    <div className="flex items-center space-x-3 text-gray-300">
-                      <MapPin className="text-[#FF6B00]" size={20} />
-                      <span>{featuredEvent.venue}</span>
+                    <div className="flex items-start space-x-3 text-gray-300 text-sm sm:text-base">
+                      <MapPin className="text-[#FF6B00] flex-shrink-0 mt-0.5" size={20} />
+                      <span className="break-words">{featuredEvent.venue}</span>
                     </div>
                   </div>
-                  <button className="bg-[#FF6B00] text-white px-8 py-3 rounded-full hover:bg-[#ff8534] transition-colors duration-300 font-semibold flex items-center justify-center space-x-2">
-                    <span>Register Now</span>
-                    <ArrowRight size={20} />
-                  </button>
                 </div>
               </div>
             </div>
@@ -153,8 +183,8 @@ export default function UpcomingEvents() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
             <div className="flex items-center space-x-3">
-              <Filter className="text-[#FF6B00]" size={24} />
-              <h3 className="text-2xl font-bold text-white">Filter by Category</h3>
+              <Filter className="text-[#FF6B00] flex-shrink-0" size={24} />
+              <h3 className="text-lg sm:text-2xl font-bold text-white">Filter by Category</h3>
             </div>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -208,9 +238,6 @@ export default function UpcomingEvents() {
                       <span>{event.venue}</span>
                     </div>
                   </div>
-                  <button className="w-full bg-[#FF6B00] text-white py-2 rounded-full hover:bg-[#ff8534] transition-colors duration-300 font-semibold">
-                    Register
-                  </button>
                 </div>
               </div>
             ))}

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 flex items-center justify-center">
@@ -95,8 +95,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-[#FF6B00] flex-shrink-0" />
-                <a href="mailto:info@sanatanspirituality.org" className="text-gray-400 hover:text-[#FF6B00] transition-colors duration-300 text-sm">
-                  info@sanatanspirituality.org
+                <a href="mailto:ssukconnect@gmail.com" className="text-gray-400 hover:text-[#FF6B00] transition-colors duration-300 text-sm">
+                  ssukconnect@gmail.com
                 </a>
               </li>
             </ul>
@@ -136,7 +136,7 @@ export default function Footer() {
 
             <div className="bg-white p-3 rounded-lg inline-block">
               <img
-                src="/photo_5807747553699761768_y.jpg"
+                src="/whatsapp-qr.png"
                 alt="WhatsApp QR Code"
                 className="w-32 h-32"
               />

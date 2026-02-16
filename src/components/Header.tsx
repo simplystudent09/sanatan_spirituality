@@ -83,7 +83,7 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center space-x-4">
             <Link
-              to="/upcoming-events"
+              to="/join"
               className="bg-[#FF6B00] text-white px-6 py-2 rounded-full hover:bg-[#ff8534] transition-colors duration-300 font-medium"
             >
               Join Us
@@ -91,7 +91,7 @@ export default function Header() {
           </div>
 
           <button
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -114,7 +114,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              to="/upcoming-events"
+              to="/join"
               className="block mt-4 bg-[#FF6B00] text-white px-6 py-3 rounded-full hover:bg-[#ff8534] transition-colors duration-300 text-center font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >

@@ -12,6 +12,10 @@ export default function Team() {
   }, []);
 
   const fetchTeamMembers = async () => {
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
     try {
       const { data, error } = await supabase
         .from('team_members')
@@ -62,7 +66,7 @@ export default function Team() {
     <div className="min-h-screen bg-black pt-20">
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-center text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-4">
             Our Team
           </h1>
           <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-8" />
@@ -155,14 +159,14 @@ export default function Team() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:info@sanatanspirituality.org"
+                href="mailto:ssukconnect@gmail.com"
                 className="inline-flex items-center justify-center space-x-2 bg-[#FF6B00] text-white px-8 py-4 rounded-full hover:bg-[#ff8534] transition-colors duration-300 font-semibold"
               >
                 <Mail size={20} />
                 <span>Email Us</span>
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://chat.whatsapp.com/HAmQud3OOaiKAGqbyxqBAv?mode=gi_t"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-full hover:bg-green-700 transition-colors duration-300 font-semibold"

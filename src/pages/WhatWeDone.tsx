@@ -15,6 +15,10 @@ export default function WhatWeDone() {
   }, []);
 
   const fetchData = async () => {
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
     try {
       const [galleryRes, testimonialsRes, statisticsRes] = await Promise.all([
         supabase.from('gallery').select('*').order('date', { ascending: false }),
@@ -91,7 +95,7 @@ export default function WhatWeDone() {
     <div className="min-h-screen bg-black pt-20">
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-center text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-4">
             What We've Accomplished
           </h1>
           <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-8" />
@@ -103,7 +107,7 @@ export default function WhatWeDone() {
 
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-white mb-16">Our Impact</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-16">Our Impact</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
@@ -129,7 +133,7 @@ export default function WhatWeDone() {
 
       <section className="py-20 bg-black relative">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-white mb-16">Our Journey</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-16">Our Journey</h2>
           <div className="max-w-4xl mx-auto">
             {timeline.map((item, index) => (
               <div key={index} className="relative pl-8 pb-16 last:pb-0">
@@ -158,7 +162,7 @@ export default function WhatWeDone() {
 
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-white mb-4">Photo Gallery</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-4">Photo Gallery</h2>
           <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-16" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {gallery.map((item) => (
@@ -186,7 +190,7 @@ export default function WhatWeDone() {
 
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-white mb-4">Testimonials</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-4">Testimonials</h2>
           <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-16" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (

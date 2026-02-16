@@ -82,7 +82,7 @@ export default function Home() {
         </div>
 
         <div
-          className={`relative z-10 text-center transform transition-all duration-1000 ${
+          className={`relative z-10 text-center transform transition-all duration-1000 px-4 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
@@ -117,11 +117,11 @@ export default function Home() {
             </svg>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             Sanatan Spirituality Foundation
           </h1>
 
-          <p className="text-5xl md:text-7xl text-[#FF6B00] font-bold mb-8 tracking-wide devanagari">
+          <p className="text-4xl sm:text-5xl md:text-7xl text-[#FF6B00] font-bold mb-8 tracking-wide devanagari">
             संस्कार
           </p>
 
@@ -131,7 +131,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <Link
-              to="/upcoming-events"
+              to="/join"
               className="bg-[#FF6B00] text-white px-8 py-4 rounded-full hover:bg-[#ff8534] transition-all duration-300 text-lg font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-[#FF6B00]/50"
             >
               <span>Join Us</span>
@@ -153,7 +153,54 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-12 md:py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">
+            About the Foundation
+          </h2>
+          <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-10" />
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed text-center max-w-3xl mx-auto mb-8 px-4">
+            Sanatan Spirituality Foundation is a leading Sanatan spiritual non profit organisation operating across the UK and Bharat, dedicated to spreading spiritual awareness, Vedic knowledge, and Dharmic values. SSF designs and hosts large scale cultural and devotional events that uplift communities, inspire youth, and preserve ancient traditions in a contemporary setting.
+          </p>
+          <h3 className="text-xl font-semibold text-white mb-4 text-center">SSF&apos;s core pillars include:</h3>
+          <ul className="space-y-3 max-w-2xl mx-auto mb-8 list-none">
+            <li className="flex items-start gap-3 text-gray-300 text-base sm:text-lg">
+              <span className="text-[#FF6B00] flex-shrink-0">•</span>
+              <span>Promoting Sanatan Dharma and Vedic education</span>
+            </li>
+            <li className="flex items-start gap-3 text-gray-300 text-base sm:text-lg">
+              <span className="text-[#FF6B00] flex-shrink-0">•</span>
+              <span>Creating youth centric spiritual programmes and platforms</span>
+            </li>
+            <li className="flex items-start gap-3 text-gray-300 text-base sm:text-lg">
+              <span className="text-[#FF6B00] flex-shrink-0">•</span>
+              <span>Supporting community development and service initiatives</span>
+            </li>
+            <li className="flex items-start gap-3 text-gray-300 text-base sm:text-lg">
+              <span className="text-[#FF6B00] flex-shrink-0">•</span>
+              <span>Preserving cultural and spiritual heritage through festivals and gatherings</span>
+            </li>
+          </ul>
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed text-center max-w-3xl mx-auto px-4">
+            With a track record of high quality, well organised, and impactful devotional events, SSF is trusted by devotees, families, and partner organisations alike.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">
+            About Me
+          </h2>
+          <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-4" />
+          <p className="text-[#FF6B00] text-lg font-semibold text-center mb-10">Acharya Abhi Yogi ji</p>
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed text-center max-w-3xl mx-auto px-4">
+            Acharya Abhi Yogi ji is the Founder of Sanatan Spirituality Foundation and Co-founder of Sumarti Ashram in Bharat, working alongside Jagadguru Swami Sandeepani ji Maharaj. A dedicated Sanatan Dharma guide and spiritual educator, he leads multiple initiatives for Vedic and Sanatan education across the UK, Bharat, and the USA. For over a decade, he has been a Kundalini Yogi, freely teaching this sacred and hidden science to seekers around the world. Through his Sanatan Gurukul and Simply Sanatan platforms, he promotes Shastras, Sanskrit learning, Sanatan values, and spiritual literacy for children and adults. His mission is to ensure Sanatan and Vedic literacy for every Sanatani child and to spread the understanding that the true purpose of life is understood &amp; begins after spiritual awakening and self-realisation. 🕉️🙏
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">
             Four Pillars of Sanatan Dharma
@@ -187,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 border-2 border-[#FF6B00] rounded-full" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 border-2 border-[#FF6B00] rounded-full" />
@@ -226,7 +273,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -268,7 +315,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-12 md:py-20 bg-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Begin Your Spiritual Journey Today
