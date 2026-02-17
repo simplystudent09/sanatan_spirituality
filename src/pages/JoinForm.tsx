@@ -59,8 +59,8 @@ export default function JoinForm() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center">
-          <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-[#FF6B00]/20 flex items-center justify-center">
-            <CheckCircle className="text-[#FF6B00]" size={64} />
+          <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-primary/20 flex items-center justify-center">
+            <CheckCircle className="text-primary" size={64} />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Thank You for Joining!
@@ -70,7 +70,7 @@ export default function JoinForm() {
           </p>
           <Link
             to="/"
-            className="inline-flex items-center space-x-2 bg-[#FF6B00] text-white px-8 py-4 rounded-full hover:bg-[#ff8534] transition-colors duration-300 font-semibold"
+            className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primaryHover transition-colors duration-300 font-semibold"
           >
             <ArrowLeft size={20} />
             <span>Back to Home</span>
@@ -85,13 +85,13 @@ export default function JoinForm() {
       <div className="max-w-md w-full">
         <Link
           to="/"
-          className="inline-flex items-center space-x-2 text-gray-400 hover:text-[#FF6B00] transition-colors mb-8"
+          className="inline-flex items-center space-x-2 text-gray-400 hover:text-primary transition-colors mb-8"
         >
           <ArrowLeft size={20} />
           <span>Back to Home</span>
         </Link>
 
-        <div className="bg-gradient-to-br from-gray-800 to-black p-6 sm:p-8 rounded-2xl border-2 border-[#FF6B00]/30 shadow-2xl">
+        <div className="bg-gradient-to-br from-gray-800 to-black p-6 sm:p-8 rounded-2xl border-2 border-primary/30 shadow-2xl">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
               Join Our Community
@@ -117,7 +117,7 @@ export default function JoinForm() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter your name"
-                  className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:border-[#FF6B00] focus:ring-2 focus:ring-[#FF6B00]/30 outline-none transition-all"
+                  className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-all"
                   required
                 />
               </div>
@@ -138,7 +138,7 @@ export default function JoinForm() {
                   value={contactNumber}
                   onChange={(e) => setContactNumber(e.target.value)}
                   placeholder="Any format: +91 98765 43210, +4477988898932, etc."
-                  className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:border-[#FF6B00] focus:ring-2 focus:ring-[#FF6B00]/30 outline-none transition-all"
+                  className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-all"
                   required
                   autoComplete="tel"
                 />
@@ -152,7 +152,7 @@ export default function JoinForm() {
 
             <button
               type="submit"
-              className="w-full bg-[#FF6B00] text-white py-4 rounded-xl font-semibold hover:bg-[#ff8534] transition-colors duration-300"
+              className="w-full bg-primary text-white py-4 rounded-xl font-semibold hover:bg-primaryHover transition-colors duration-300"
             >
               Submit
             </button>

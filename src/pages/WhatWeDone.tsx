@@ -64,24 +64,24 @@ export default function WhatWeDone() {
     {
       year: '2026',
       title: 'Expanding Horizon',
-      achievements: ['Work started on Sumarti Ashram Bharat with co-founder Acharya Abhi Yogi Ji', 'International yoga teacher training'],
+      achievements: ['Work started on Sumarti Ashram Bharat with co-founder Acharya Abhi Yogi Ji', 'International sanatan events planned'],
     },
     {
       year: '2025',
       title: 'New Journey',
-      achievements: ['New chapter launched in Bharat USA', 'Sanatan Sanstha UK (SSUK) launches more chapters in USA and Bharat and now becomes Sanatan Spirituality Foundation (SSF)'],
+      achievements: ['New chapter launched in Bharat and USA', 'Sanatan Sanstha UK (SSUK) - now becomes Sanatan Spirituality Foundation (SSF)'],
     },
     {
       year: '2022',
       title: 'Foundation Years',
-      achievements: ['Started Sanatan UK', 'Did first Bhagavad Gita event in UK Parliament'],
+      achievements: ['Started Sanatan Sanstha of UK (SSUK)', 'Did first Bhagavad Gita event in UK Parliament'],
     },
   ];
 
   if (loading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-[#FF6B00] text-2xl">Loading...</div>
+        <div className="text-primary text-2xl">Loading...</div>
       </div>
     );
   }
@@ -93,7 +93,7 @@ export default function WhatWeDone() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-4">
             What We've Accomplished
           </h1>
-          <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-primary mx-auto mb-8" />
           <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto">
             A journey of service, devotion, and spiritual awakening
           </p>
@@ -109,12 +109,12 @@ export default function WhatWeDone() {
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-black to-gray-800 p-8 rounded-2xl border-2 border-[#FF6B00]/30 text-center group hover:border-[#FF6B00] transition-all duration-300 shadow-xl"
+                  className="bg-gradient-to-br from-black to-gray-800 p-8 rounded-2xl border-2 border-primary/30 text-center group hover:border-primary transition-all duration-300 shadow-xl"
                 >
-                  <div className="w-20 h-20 bg-[#FF6B00]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#FF6B00] transition-all duration-300">
-                    <Icon className="text-[#FF6B00] group-hover:text-white transition-colors duration-300" size={40} />
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-all duration-300">
+                    <Icon className="text-primary group-hover:text-white transition-colors duration-300" size={40} />
                   </div>
-                  <div className="text-5xl font-bold text-[#FF6B00] mb-2">
+                  <div className="text-5xl font-bold text-primary mb-2">
                     {stat.value.toLocaleString()}
                     {stat.suffix}
                   </div>
@@ -129,7 +129,7 @@ export default function WhatWeDone() {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-4">Featured Video</h2>
-          <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-12" />
+          <div className="w-24 h-1 bg-primary mx-auto mb-12" />
           <div className="max-w-4xl mx-auto">
             <div className="aspect-video w-full rounded-xl overflow-hidden border border-gray-700">
               <iframe
@@ -150,17 +150,17 @@ export default function WhatWeDone() {
           <div className="max-w-4xl mx-auto">
             {timeline.map((item, index) => (
               <div key={index} className="relative pl-8 pb-16 last:pb-0">
-                <div className="absolute left-0 top-0 w-4 h-4 bg-[#FF6B00] rounded-full" />
+                <div className="absolute left-0 top-0 w-4 h-4 bg-primary rounded-full" />
                 {index !== timeline.length - 1 && (
-                  <div className="absolute left-[7px] top-4 bottom-0 w-0.5 bg-[#FF6B00]/30" />
+                  <div className="absolute left-[7px] top-4 bottom-0 w-0.5 bg-primary/30" />
                 )}
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#FF6B00] transition-all duration-300">
-                  <div className="text-[#FF6B00] font-bold text-2xl mb-2">{item.year}</div>
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 hover:border-primary transition-all duration-300">
+                  <div className="text-primary font-bold text-2xl mb-2">{item.year}</div>
                   <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                   <div className="space-y-2">
                     {item.achievements.map((achievement, i) => (
                       <div key={i} className="flex items-center space-x-2 text-gray-400">
-                        <div className="w-2 h-2 bg-[#FF6B00] rounded-full" />
+                        <div className="w-2 h-2 bg-primary rounded-full" />
                         <span>{achievement}</span>
                       </div>
                     ))}

@@ -102,7 +102,7 @@ export default function UpcomingEvents() {
   if (loading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-[#FF6B00] text-2xl">Loading events...</div>
+        <div className="text-primary text-2xl">Loading events...</div>
       </div>
     );
   }
@@ -114,7 +114,7 @@ export default function UpcomingEvents() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-4">
             Upcoming Events
           </h1>
-          <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-primary mx-auto mb-8" />
           <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto">
             Join us for transformative spiritual experiences and sacred gatherings
           </p>
@@ -125,7 +125,7 @@ export default function UpcomingEvents() {
         <section className="py-12 bg-gray-900">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-8">Featured Event</h2>
-            <div className="max-w-5xl mx-auto bg-gradient-to-br from-black to-gray-800 rounded-2xl overflow-hidden border-2 border-[#FF6B00] shadow-2xl shadow-[#FF6B00]/20">
+            <div className="max-w-5xl mx-auto bg-gradient-to-br from-black to-gray-800 rounded-2xl overflow-hidden border-2 border-primary shadow-2xl shadow-primary/20">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div
                   className="relative h-64 lg:h-auto cursor-pointer"
@@ -136,27 +136,27 @@ export default function UpcomingEvents() {
                     alt={featuredEvent.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-[#FF6B00] text-white px-4 py-2 rounded-full font-semibold">
+                  <div className="absolute top-4 left-4 bg-primary text-white px-4 py-2 rounded-full font-semibold">
                     Featured
                   </div>
                 </div>
                 <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="inline-block bg-[#FF6B00]/20 text-[#FF6B00] px-4 py-1 rounded-full text-sm font-semibold mb-4 self-start">
+                  <div className="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm font-semibold mb-4 self-start">
                     {featuredEvent.category}
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 break-words">{featuredEvent.title}</h3>
                   <p className="text-gray-300 mb-6 text-sm sm:text-base">{featuredEvent.description}</p>
                   <div className="space-y-3 mb-6 min-w-0 break-words">
                     <div className="flex items-center space-x-3 text-gray-300 text-sm sm:text-base">
-                      <Calendar className="text-[#FF6B00] flex-shrink-0" size={20} />
+                      <Calendar className="text-primary flex-shrink-0" size={20} />
                       <span>{formatDate(featuredEvent.date)}</span>
                     </div>
                     <div className="flex items-center space-x-3 text-gray-300 text-sm sm:text-base">
-                      <Clock className="text-[#FF6B00] flex-shrink-0" size={20} />
+                      <Clock className="text-primary flex-shrink-0" size={20} />
                       <span>{featuredEvent.time}</span>
                     </div>
                     <div className="flex items-start space-x-3 text-gray-300 text-sm sm:text-base">
-                      <MapPin className="text-[#FF6B00] flex-shrink-0 mt-0.5" size={20} />
+                      <MapPin className="text-primary flex-shrink-0 mt-0.5" size={20} />
                       <span className="break-words">{featuredEvent.venue}</span>
                     </div>
                   </div>
@@ -171,7 +171,7 @@ export default function UpcomingEvents() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
             <div className="flex items-center space-x-3">
-              <Filter className="text-[#FF6B00] flex-shrink-0" size={24} />
+              <Filter className="text-primary flex-shrink-0" size={24} />
               <h3 className="text-lg sm:text-2xl font-bold text-white">Filter by Category</h3>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -181,7 +181,7 @@ export default function UpcomingEvents() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 ${
                     selectedCategory === category
-                      ? 'bg-[#FF6B00] text-white'
+                      ? 'bg-primary text-white'
                       : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   }`}
                 >
@@ -195,7 +195,7 @@ export default function UpcomingEvents() {
             {filteredEvents.map((event) => (
               <div
                 key={event.id}
-                className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-[#FF6B00] transition-all duration-300 shadow-lg hover:shadow-[#FF6B00]/20 group"
+                className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 group"
               >
                 <div
                   className="relative h-48 overflow-hidden cursor-pointer"
@@ -206,26 +206,26 @@ export default function UpcomingEvents() {
                     alt={event.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 right-3 bg-[#FF6B00] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {event.category}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#FF6B00] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300">
                     {event.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-4 line-clamp-2">{event.description}</p>
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                      <Calendar className="text-[#FF6B00]" size={16} />
+                      <Calendar className="text-primary" size={16} />
                       <span>{formatDate(event.date)}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                      <Clock className="text-[#FF6B00]" size={16} />
+                      <Clock className="text-primary" size={16} />
                       <span>{event.time}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                      <MapPin className="text-[#FF6B00]" size={16} />
+                      <MapPin className="text-primary" size={16} />
                       <span>{event.venue}</span>
                     </div>
                   </div>
@@ -244,10 +244,10 @@ export default function UpcomingEvents() {
 
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto bg-gradient-to-br from-gray-800 to-black p-8 md:p-12 rounded-2xl border-2 border-[#FF6B00]/30 shadow-2xl">
+          <div className="max-w-2xl mx-auto bg-gradient-to-br from-gray-800 to-black p-8 md:p-12 rounded-2xl border-2 border-primary/30 shadow-2xl">
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-[#FF6B00]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="text-[#FF6B00]" size={32} />
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageCircle className="text-primary" size={32} />
               </div>
               <h2 className="text-3xl font-bold text-white mb-3">Get Event Updates on WhatsApp</h2>
               <p className="text-gray-300">
@@ -283,7 +283,7 @@ export default function UpcomingEvents() {
           onClick={() => setSelectedPoster(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-[#FF6B00] transition-colors z-10"
+            className="absolute top-4 right-4 text-white hover:text-primary transition-colors z-10"
             onClick={() => setSelectedPoster(null)}
             aria-label="Close"
           >

@@ -57,7 +57,7 @@ export default function Team() {
   if (loading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-[#FF6B00] text-2xl">Loading team...</div>
+        <div className="text-primary text-2xl">Loading team...</div>
       </div>
     );
   }
@@ -69,7 +69,7 @@ export default function Team() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-4">
             Our Story
           </h1>
-          <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-primary mx-auto mb-8" />
           <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto">
             Meet the dedicated souls committed to preserving and sharing the wisdom of Sanatan Dharma
           </p>
@@ -82,7 +82,7 @@ export default function Team() {
             <img
               src="/our-story-community.png"
               alt="Sanatan Spirituality Foundation community"
-              className="w-full rounded-2xl border-2 border-[#FF6B00]/30 shadow-2xl object-cover"
+              className="w-full rounded-2xl border-2 border-primary/30 shadow-2xl object-cover"
             />
             <div className="mt-10 max-w-3xl mx-auto space-y-6">
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed text-left">
@@ -104,7 +104,7 @@ export default function Team() {
               <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
                 {getHierarchyTitle(Number(level))}
               </h2>
-              <div className="w-16 h-1 bg-[#FF6B00] mx-auto mb-12" />
+              <div className="w-16 h-1 bg-primary mx-auto mb-12" />
 
               <div
                 className={`grid gap-8 ${
@@ -116,7 +116,7 @@ export default function Team() {
                 {members.map((member, index) => (
                   <div
                     key={member.id}
-                    className={`bg-gradient-to-br from-gray-800 to-black rounded-2xl overflow-hidden border-2 border-gray-700 hover:border-[#FF6B00] transition-all duration-300 shadow-lg hover:shadow-[#FF6B00]/20 group ${
+                    className={`bg-gradient-to-br from-gray-800 to-black rounded-2xl overflow-hidden border-2 border-gray-700 hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 group ${
                       Number(level) === 1 ? 'flex flex-col md:flex-row' : ''
                     }`}
                     style={{
@@ -124,7 +124,7 @@ export default function Team() {
                     }}
                   >
                     <div
-                      className={`relative overflow-hidden bg-gradient-to-br from-[#FF6B00]/20 to-gray-800 ${
+                      className={`relative overflow-hidden bg-gradient-to-br from-primary/20 to-gray-800 ${
                         Number(level) === 1 ? 'md:w-1/2 h-64 md:h-auto' : 'h-64'
                       }`}
                     >
@@ -136,7 +136,7 @@ export default function Team() {
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
-                          <User className="text-[#FF6B00]" size={Number(level) === 1 ? 120 : 80} />
+                          <User className="text-primary" size={Number(level) === 1 ? 120 : 80} />
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -144,13 +144,13 @@ export default function Team() {
 
                     <div className={`p-6 ${Number(level) === 1 ? 'md:w-1/2 flex flex-col justify-center' : ''}`}>
                       <h3
-                        className={`font-bold text-white mb-2 group-hover:text-[#FF6B00] transition-colors duration-300 ${
+                        className={`font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300 ${
                           Number(level) === 1 ? 'text-3xl' : 'text-xl'
                         }`}
                       >
                         {member.name}
                       </h3>
-                      <p className="text-[#FF6B00] font-semibold mb-3">{member.role}</p>
+                      <p className="text-primary font-semibold mb-3">{member.role}</p>
                       <p className="text-gray-300 text-sm mb-4 leading-relaxed">{member.bio}</p>
                       {member.specialization && (
                         <div className="mb-4">
@@ -168,9 +168,9 @@ export default function Team() {
 
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-gradient-to-br from-gray-800 to-black p-12 rounded-2xl border-2 border-[#FF6B00]/30 shadow-2xl text-center">
-            <div className="w-20 h-20 bg-[#FF6B00]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <MessageCircle className="text-[#FF6B00]" size={40} />
+          <div className="max-w-3xl mx-auto bg-gradient-to-br from-gray-800 to-black p-12 rounded-2xl border-2 border-primary/30 shadow-2xl text-center">
+            <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <MessageCircle className="text-primary" size={40} />
             </div>
             <h2 className="text-4xl font-bold text-white mb-4">Join Our Team</h2>
             <p className="text-gray-300 text-lg mb-8">
@@ -180,7 +180,7 @@ export default function Team() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:ssukconnect@gmail.com"
-                className="inline-flex items-center justify-center space-x-2 bg-[#FF6B00] text-white px-8 py-4 rounded-full hover:bg-[#ff8534] transition-colors duration-300 font-semibold"
+                className="inline-flex items-center justify-center space-x-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primaryHover transition-colors duration-300 font-semibold"
               >
                 <Mail size={20} />
                 <span>Email Us</span>

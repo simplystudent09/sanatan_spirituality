@@ -46,8 +46,8 @@ export default function Header() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-white hover:text-[#FF6B00] transition-colors duration-300 font-medium ${
-                  isActive(link.to) ? 'text-[#FF6B00]' : ''
+                className={`text-white hover:text-primary transition-colors duration-300 font-medium ${
+                  isActive(link.to) ? 'text-primary' : ''
                 }`}
               >
                 {link.label}
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/join"
-              className="bg-[#FF6B00] text-white px-6 py-2 rounded-full hover:bg-[#ff8534] transition-colors duration-300 font-medium"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primaryHover transition-colors duration-300 font-medium"
             >
               Join Us
             </Link>
@@ -79,8 +79,8 @@ export default function Header() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`block py-3 text-white hover:text-[#FF6B00] transition-colors duration-300 ${
-                  isActive(link.to) ? 'text-[#FF6B00]' : ''
+                className={`block py-3 text-white hover:text-primary transition-colors duration-300 ${
+                  isActive(link.to) ? 'text-primary' : ''
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -89,7 +89,7 @@ export default function Header() {
             ))}
             <Link
               to="/join"
-              className="block mt-4 bg-[#FF6B00] text-white px-6 py-3 rounded-full hover:bg-[#ff8534] transition-colors duration-300 text-center font-medium"
+              className="block mt-4 bg-primary text-white px-6 py-3 rounded-full hover:bg-primaryHover transition-colors duration-300 text-center font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Join Us
