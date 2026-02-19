@@ -176,7 +176,18 @@ export default function Team() {
                 </p>
                 <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
                   <p>
-                    Shri Ajay Prakash, Vice President of the Sanatan Spirituality Foundation, has been a pillar of strength and dedication in advancing the vision of Sanatan work in the UK. With unwavering commitment, he has consistently offered his time, guidance, and wholehearted support to every initiative of the foundation, playing a vital role in nurturing its spiritual and cultural mission. He is also President of KRISH TRAVELS, a proud Sanatani travel agency and trusted partner of SSF, supporting community journeys and spiritually aligned travel experiences. His devotion to Dharma, leadership spirit, and continuous service remain a true inspiration to all connected with the foundation.
+                    Shri Ajay Prakash, Vice President of the Sanatan Spirituality Foundation, has been a pillar of strength and dedication in advancing the vision of Sanatan work in the UK. With unwavering commitment, he has consistently offered his time, guidance, and wholehearted support to every initiative of the foundation, playing a vital role in nurturing its spiritual and cultural mission.
+                  </p>
+                  <p>
+                    He is President of KRISH TRAVEL, a Sanatani travel agency and trusted partner of SSF, supporting community journeys and spiritually aligned travel experiences. His devotion to Dharma, leadership spirit, and continuous service remain a true inspiration to all connected with the foundation.{' '}
+                    <a
+                      href="https://www.krishtravel.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primaryHover underline transition-colors duration-300"
+                    >
+                      www.krishtravel.com
+                    </a>
                   </p>
                 </div>
               </div>
