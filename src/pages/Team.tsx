@@ -141,7 +141,7 @@ export default function Team() {
                 <img
                   src="/ajay-prakash-full.jpeg"
                   alt="Shri Ajay Prakash"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-8">
