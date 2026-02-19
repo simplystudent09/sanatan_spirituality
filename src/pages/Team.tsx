@@ -137,35 +137,6 @@ export default function Team() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
-              <div className="w-full h-96 overflow-hidden flex items-center justify-center bg-gray-100">
-                <img
-                  src="/ajay-prakash-full.jpeg"
-                  alt="Shri Ajay Prakash"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
-                  SHRI AJAY PRAKASH
-                </h3>
-                <p className="text-lg text-primary font-semibold text-center mb-6">
-                  VICE PRESIDENT, SANATAN SPIRITUALITY FOUNDATION
-                </p>
-                <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-                  <p>
-                    Shri Ajay Prakash, Vice President of the Sanatan Spirituality Foundation, has been a pillar of strength and dedication in advancing the vision of Sanatan work in the UK. With unwavering commitment, he has consistently offered his time, guidance, and wholehearted support to every initiative of the foundation, playing a vital role in nurturing its spiritual and cultural mission. He is also President of KRISH TRAVELS, a proud Sanatani travel agency and trusted partner of SSF, supporting community journeys and spiritually aligned travel experiences. His devotion to Dharma, leadership spirit, and continuous service remain a true inspiration to all connected with the foundation.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-pageBg">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
               <img
                 src="/photo_5807747553699761772_x.jpg"
                 alt="Acharya Abhi Yogi Ji"
@@ -184,6 +155,35 @@ export default function Team() {
                   </p>
                   <p>
                     For over a decade, he has been a Kundalini Yogi, freely teaching this sacred and hidden science to seekers around the world. Through his Sanatan Gurukul and Simply Sanatan platforms, he promotes Shastras, Sanskrit learning, Sanatan values, and spiritual literacy for children and adults. His mission is to ensure Sanatan and Vedic literacy for every Sanatani child and to spread the understanding that the true purpose of life is understood & begins after spiritual awakening and self-realisation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
+              <div className="w-full h-96 overflow-hidden flex items-center justify-center bg-gray-100">
+                <img
+                  src="/ajay-prakash-full.jpeg"
+                  alt="Shri Ajay Prakash"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
+                  SHRI AJAY PRAKASH
+                </h3>
+                <p className="text-lg text-primary font-semibold text-center mb-6">
+                  VICE PRESIDENT, SANATAN SPIRITUALITY FOUNDATION
+                </p>
+                <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
+                  <p>
+                    Shri Ajay Prakash, Vice President of the Sanatan Spirituality Foundation, has been a pillar of strength and dedication in advancing the vision of Sanatan work in the UK. With unwavering commitment, he has consistently offered his time, guidance, and wholehearted support to every initiative of the foundation, playing a vital role in nurturing its spiritual and cultural mission. He is also President of KRISH TRAVELS, a proud Sanatani travel agency and trusted partner of SSF, supporting community journeys and spiritually aligned travel experiences. His devotion to Dharma, leadership spirit, and continuous service remain a true inspiration to all connected with the foundation.
                   </p>
                 </div>
               </div>
