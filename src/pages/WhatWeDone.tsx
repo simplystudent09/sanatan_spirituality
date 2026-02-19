@@ -213,6 +213,48 @@ export default function WhatWeDone() {
           </div>
         </div>
       </section>
+
+      <section className="py-20 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Sanatan Concepts</h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8" />
+          <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-12">
+            Deep dive into the fundamental concepts and teachings of Sanatan Dharma
+          </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="aspect-video w-full rounded-xl overflow-hidden border-2 border-maroon shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/videoseries?list=PLvwfzYVr21N-PoArsaNMQS6yrw9IYia0m"
+                title="Sanatan Concepts Playlist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Navratri Puja - Shorts</h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8" />
+          <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-12">
+            Quick spiritual guidance and Navratri puja rituals in short video format
+          </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="aspect-video w-full rounded-xl overflow-hidden border-2 border-maroon shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/videoseries?list=PLvwfzYVr21N8yqjLS8E3Qs6k4GnlWN3eY"
+                title="Navratri Puja Shorts Playlist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
