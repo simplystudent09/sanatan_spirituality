@@ -103,7 +103,7 @@ export default function Team() {
               <img
                 src="/swami_ji_maharaj.jpg"
                 alt="Jagadguru Swami Sandeepani Ji Maharaj"
-                className="w-full object-cover"
+                className="w-full object-contain"
               />
               <div className="p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
