@@ -69,28 +69,28 @@ export default function Header() {
                 href="https://facebook.com/ssfconnect"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-primary/50"
                 aria-label="Facebook"
               >
-                <Facebook size={18} />
+                <Facebook size={18} className="text-white" />
               </a>
               <a
                 href="https://instagram.com/ssfconnect"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-primary/50"
                 aria-label="Instagram"
               >
-                <Instagram size={18} />
+                <Instagram size={18} className="text-white" />
               </a>
               <a
                 href="https://youtube.com/@abhiyogishow"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-primary/50"
                 aria-label="YouTube"
               >
-                <Youtube size={18} />
+                <Youtube size={18} className="text-white" />
               </a>
             </div>
             <Link
@@ -129,28 +129,28 @@ export default function Header() {
                 href="https://facebook.com/ssfconnect"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-primary/50"
                 aria-label="Facebook"
               >
-                <Facebook size={20} />
+                <Facebook size={20} className="text-white" />
               </a>
               <a
                 href="https://instagram.com/ssfconnect"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-primary/50"
                 aria-label="Instagram"
               >
-                <Instagram size={20} />
+                <Instagram size={20} className="text-white" />
               </a>
               <a
                 href="https://youtube.com/@abhiyogishow"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-primary/50"
                 aria-label="YouTube"
               >
-                <Youtube size={20} />
+                <Youtube size={20} className="text-white" />
               </a>
             </div>
             <Link
