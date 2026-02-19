@@ -167,13 +167,12 @@ export default function Home() {
       <section className="py-12 md:py-20 bg-pageBg">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
-            About Me
+            THE VISION
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-          <p className="text-primary text-lg font-semibold text-center mb-8">Acharya Abhi Yogi ji</p>
+          <div className="w-24 h-1 bg-primary mx-auto mb-10" />
           <div className="max-w-3xl mx-auto px-4">
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-left">
-              Acharya Abhi Yogi ji is the Founder of Sanatan Spirituality Foundation and Co-founder of Sumarti Ashram in Bharat, working alongside Jagadguru Swami Sandeepani ji Maharaj. A dedicated Sanatan Dharma guide and spiritual educator, he leads multiple initiatives for Vedic and Sanatan education across the UK, Bharat, and the USA. For over a decade, he has been a Kundalini Yogi, freely teaching this sacred and hidden science to seekers around the world. Through his Sanatan Gurukul and Simply Sanatan platforms, he promotes Shastras, Sanskrit learning, Sanatan values, and spiritual literacy for children and adults. His mission is to ensure Sanatan and Vedic literacy for every Sanatani child and to spread the understanding that the true purpose of life is understood &amp; begins after spiritual awakening and self-realisation. 🕉️🙏
+              The vision of Sanatan Spirituality Foundation (SSF), founded by Acharya Abhiyogi, is rooted in the timeless principles of Sanatan Dharma — to awaken inner consciousness and guide society toward authentic spiritual living. Under his mentorship, SSF has become a dynamic platform for spiritual revival, organising deeply transformative events, Kundalini meditation workshops, and sacred practices that nurture both devotion and self-realisation. Through powerful knowledge-sharing across Instagram, YouTube, and Facebook, meaningful podcasts with spiritually awakened guests, and structured workshops, the foundation continues to expand its reach globally. Teaching children the sacred practice of Rudra Abhishek, introducing Sanskrit and Vedic wisdom to young minds, and offering correct spiritual guidance are not just activities — they are living expressions of SSF's mission to preserve, practice, and pass on the eternal light of Sanatan spirituality.
             </p>
           </div>
         </div>
