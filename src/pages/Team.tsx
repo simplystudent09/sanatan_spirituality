@@ -102,11 +102,13 @@ export default function Team() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
-              <img
-                src="/swami_ji_maharaj.png"
-                alt="Jagadguru Swami Sandeepani Ji Maharaj"
-                className="w-full max-h-[340px] object-cover object-top"
-              />
+              <div className="flex items-center justify-center bg-gray-100 min-h-[320px] max-h-[380px] p-4">
+                <img
+                  src="/swami_ji_maharaj.png"
+                  alt="Jagadguru Swami Sandeepani Ji Maharaj"
+                  className="max-w-full max-h-[340px] w-auto h-auto object-contain"
+                />
+              </div>
               <div className="p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
                   JAGADGURU SWAMI SANDEEPANI JI MAHARAJ
