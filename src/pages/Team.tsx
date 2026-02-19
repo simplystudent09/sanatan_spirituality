@@ -135,28 +135,21 @@ export default function Team() {
 
       <section className="py-16 bg-pageBg">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
-              <img
-                src="/photo_5807747553699761772_x.jpg"
-                alt="Acharya Abhi Yogi Ji"
-                className="w-full max-h-[340px] object-cover object-top"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
-                  ACHARYA ABHIYOGI
-                </h3>
-                <p className="text-lg text-primary font-semibold text-center mb-6">
-                  FOUNDER & PRESIDENT, SANATAN SPIRITUALITY FOUNDATION
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl p-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
+                ACHARYA ABHIYOGI
+              </h3>
+              <p className="text-lg text-primary font-semibold text-center mb-6">
+                FOUNDER & PRESIDENT, SANATAN SPIRITUALITY FOUNDATION
+              </p>
+              <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
+                <p>
+                  Acharya Abhi Yogi is the Founder of Sanatan Spirituality Foundation and Co-founder of Sumarti Ashram in Bharat, working alongside Jagadguru Swami Sandeepani ji Maharaj. A dedicated Sanatan Dharma guide and spiritual educator, he leads multiple initiatives for Vedic and Sanatan education across the UK, Bharat, and the USA.
                 </p>
-                <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-                  <p>
-                    Acharya Abhi Yogi is the Founder of Sanatan Spirituality Foundation and Co-founder of Sumarti Ashram in Bharat, working alongside Jagadguru Swami Sandeepani ji Maharaj. A dedicated Sanatan Dharma guide and spiritual educator, he leads multiple initiatives for Vedic and Sanatan education across the UK, Bharat, and the USA.
-                  </p>
-                  <p>
-                    For over a decade, he has been a Kundalini Yogi, freely teaching this sacred and hidden science to seekers around the world. Through his Sanatan Gurukul and Simply Sanatan platforms, he promotes Shastras, Sanskrit learning, Sanatan values, and spiritual literacy for children and adults. His mission is to ensure Sanatan and Vedic literacy for every Sanatani child and to spread the understanding that the true purpose of life is understood & begins after spiritual awakening and self-realisation.
-                  </p>
-                </div>
+                <p>
+                  For over a decade, he has been a Kundalini Yogi, freely teaching this sacred and hidden science to seekers around the world. Through his Sanatan Gurukul and Simply Sanatan platforms, he promotes Shastras, Sanskrit learning, Sanatan values, and spiritual literacy for children and adults. His mission is to ensure Sanatan and Vedic literacy for every Sanatani child and to spread the understanding that the true purpose of life is understood & begins after spiritual awakening and self-realisation.
+                </p>
               </div>
             </div>
           </div>
