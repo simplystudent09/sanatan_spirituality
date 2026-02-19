@@ -114,7 +114,7 @@ export default function Team() {
                   JAGADGURU SWAMI SANDEEPANI JI MAHARAJ
                 </h3>
                 <p className="text-lg text-primary font-semibold text-center mb-6">
-                  CHIEF MENTOR SSF
+                  CHIEF MENTOR, SANATAN SPIRITUALITY FOUNDATION
                 </p>
                 <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
                   <p>
