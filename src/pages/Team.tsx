@@ -76,17 +76,10 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="py-16 bg-pageBg">
+      <section className="py-12 bg-pageBg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="max-w-2xl mx-auto">
-              <img
-                src="/our-story-community.png"
-                alt="Sanatan Spirituality Foundation community"
-                className="w-full max-h-[320px] rounded-2xl border-2 border-maroon shadow-2xl object-cover"
-              />
-            </div>
-            <div className="mt-10 max-w-3xl mx-auto space-y-6">
+            <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-left">
                 In 2022, a sacred seed was planted in the UK — a seed rooted in Sanatan Dharma, culture, and spiritual awakening — and it blossomed into Sanatan Sanstha of UK, not merely an organization but a living movement. Our journey began with a historic celebration of Geeta Jayanti inside the halls of the UK Parliament, where the timeless wisdom of the Bhagavad Gita echoed through a space that shapes modern governance, symbolizing a powerful meeting of ancient dharma and contemporary society. From there, the momentum only grew. We launched Sanatan Gurukul to nurture the next generation through Hindi, Sanskrit, scriptures, and Vedic values, with three successful batches graduating and children across the UK discovering not just language but identity, mantra, and meaning. Alongside this, free Kundalini Yoga has been offered for over a decade, ensuring spirituality is not just spoken about — it is practiced and experienced.
               </p>
