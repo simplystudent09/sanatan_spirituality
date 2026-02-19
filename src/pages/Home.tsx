@@ -257,7 +257,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Shivohum Shiv Mela
+                SHIVOHUM SHIV MELA
               </h2>
               <div className="w-24 h-1 bg-primary mb-6" />
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">
