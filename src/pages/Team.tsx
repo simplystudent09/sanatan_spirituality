@@ -102,6 +102,41 @@ export default function Team() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
+              <div className="flex items-center justify-center bg-gray-100 min-h-[320px] max-h-[380px] p-4">
+                <img
+                  src="/swami_ji_maharaj.png"
+                  alt="Jagadguru Swami Sandeepani Ji Maharaj"
+                  className="max-w-full max-h-[340px] w-auto h-auto object-contain"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
+                  JAGADGURU SWAMI SANDEEPANI JI MAHARAJ
+                </h3>
+                <p className="text-lg text-primary font-semibold text-center mb-6">
+                  CHIEF MENTOR SSF
+                </p>
+                <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
+                  <p>
+                    In an age where spirituality often fades into mere discourse, Shree JagadGuru Swami Sandeepani Ji Maharaj shines as a living embodiment of divine realization — a saint whose silence carries the depth of scriptures and whose presence radiates the serenity of truth.
+                  </p>
+                  <p>
+                    Revered as a Purna Sant (Realized Master), Swami Ji embodies the harmony of ज्ञान (wisdom), भक्ति (devotion), and सेवा (selfless service). His life is not a journey of words, but of inner awakening — a path carved through tapasya, compassion, and divine insight. Each discourse of his breathes the fragrance of the Upanishads — timeless, luminous, and liberating.
+                  </p>
+                  <p>
+                    Swami Ji's mission transcends religious boundaries. His vision is to awaken humanity to its highest potential — to the realization that divinity is not somewhere distant, but dwelling within every heart. His teachings gently dissolve ignorance and fear, awakening inner peace, clarity, and spiritual purpose.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
               <div className="w-full h-96 overflow-hidden flex items-center justify-center bg-gray-100">
                 <img
                   src="/WhatsApp_Image_2026-02-18_at_15.18.44.jpeg"
