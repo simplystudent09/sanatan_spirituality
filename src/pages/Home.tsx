@@ -265,13 +265,16 @@ export default function Home() {
                 meditation, and spiritual discourse. Join thousands of devotees in honoring
                 the cosmic consciousness.
               </p>
-              <div className="flex items-center space-x-4">
-                <div className="text-6xl">🔱</div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">Mahashivratri 2026</p>
-                  <p className="text-gray-600">The Great Night of Shiva</p>
+              <Link
+                to="/upcoming-events"
+                className="inline-flex items-center space-x-4 bg-primary text-white px-8 py-4 rounded-full hover:bg-primaryHover transition-all duration-300 font-semibold shadow-lg hover:shadow-primary/50"
+              >
+                <div className="text-4xl">🔱</div>
+                <div className="text-left">
+                  <p className="text-xl font-bold">Mahashivratri 2026</p>
+                  <p className="text-white/90 text-sm">The Great Night of Shiva</p>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="bg-pageBg p-8 rounded-2xl border-2 border-maroon shadow-2xl">
               <div className="text-center">
