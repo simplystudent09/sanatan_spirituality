@@ -171,6 +171,27 @@ export default function WhatWeDone() {
           </div>
         </div>
       </section>
+
+      <section className="py-20 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Sanatan Events</h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8" />
+          <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-12">
+            Watch highlights from our spiritual events, celebrations, and community gatherings
+          </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="aspect-video w-full rounded-xl overflow-hidden border-2 border-maroon shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/videoseries?list=PLvwfzYVr21N_BhcOwdrgvS-YjxAxLFiJT"
+                title="Sanatan Events Playlist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
