@@ -131,7 +131,7 @@ export default function Team() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
               <img
-                src="/photo_5807747553699761772_x.jpg"
+                src="/Untitled_design_(4).png"
                 alt="Acharya Abhi Yogi Ji"
                 className="w-full max-h-[340px] object-cover object-top"
               />
