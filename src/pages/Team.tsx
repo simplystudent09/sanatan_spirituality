@@ -162,7 +162,7 @@ export default function Team() {
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
               <div className="w-full h-96 overflow-hidden flex items-center justify-center bg-gray-100">
                 <img
-                  src="/WhatsApp_Image_2026-02-18_at_15.18.44.jpeg"
+                  src="/ajay_prakash.jpg"
                   alt="Shri Ajay Prakash"
                   className="w-full h-full object-cover object-top"
                 />
