@@ -169,7 +169,14 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
             THE VISION
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-10" />
+          <div className="w-24 h-1 bg-primary mx-auto mb-8" />
+          <div className="flex justify-center mb-10">
+            <img
+              src="/SSF_LOGO_-_WHITE_BG.png"
+              alt="Sanatan Spirituality Foundation Logo"
+              className="w-48 h-48 object-contain"
+            />
+          </div>
           <div className="max-w-3xl mx-auto px-4">
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-left">
               The vision of Sanatan Spirituality Foundation (SSF), founded by Acharya Abhiyogi, is rooted in the timeless principles of Sanatan Dharma — to awaken inner consciousness and guide society toward authentic spiritual living. Under his mentorship, SSF has become a dynamic platform for spiritual revival, organising deeply transformative events, Kundalini meditation workshops, and sacred practices that nurture both devotion and self-realisation. Through powerful knowledge-sharing across Instagram, YouTube, and Facebook, meaningful podcasts with spiritually awakened guests, and structured workshops, the foundation continues to expand its reach globally. Teaching children the sacred practice of Rudra Abhishek, introducing Sanskrit and Vedic wisdom to young minds, and offering correct spiritual guidance are not just activities — they are living expressions of SSF's mission to preserve, practice, and pass on the eternal light of Sanatan spirituality.
