@@ -192,36 +192,6 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="py-16 bg-pageBg">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
-              <img
-                src="/shivohum-mahashivratri-mela.png"
-                alt="Sanatan community and events"
-                className="w-full max-h-[340px] object-cover object-center"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
-                  OUR SANGAM &amp; SEVA
-                </h3>
-                <p className="text-lg text-primary font-semibold text-center mb-6">
-                  COMMUNITY, EVENTS &amp; DHARMIC SERVICE
-                </p>
-                <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-                  <p>
-                    Our community comes together through sacred events — from Geeta Jayanti at the UK Parliament and Santon Ki Vaani at the Nehru Centre to the Shivoham Shiv Mela and the upcoming Shivoham Shiva Festival 2026. Over 5,000 members have been touched by these gatherings.
-                  </p>
-                  <p>
-                    With Sanatan Gurukul batches, Rudra Abhishek training at Shravanabhava Ashram, and expansion into the USA and Sumarti Ashram in Odisha, we blend ज्ञान, भक्ति, and सेवा — so that the next generation carries forward the light of Sanatan Dharma.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {Object.entries(groupedMembers)
         .sort(([a], [b]) => Number(a) - Number(b))
         .map(([level, members]) => (
