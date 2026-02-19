@@ -6,7 +6,7 @@ import { Calendar, MapPin, Clock, Filter, MessageCircle, X } from 'lucide-react'
 const STATIC_EVENTS: Event[] = [
   {
     id: 'shivohum-mahashivratri-mela-2026',
-    title: 'SHIVOHUM MAHASHIVRATRI MELA',
+    title: 'ShiVOHUM SHIV MELA',
     date: '2026-02-21',
     time: '12:30 PM - 4:30 PM',
     venue: "Tudor Park Sports & Leisure, Browell's Lane, FELTHAM, TW13 7EF",
