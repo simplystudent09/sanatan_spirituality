@@ -5,21 +5,6 @@ import { Calendar, MapPin, Clock, Filter, MessageCircle, X } from 'lucide-react'
 
 const STATIC_EVENTS: Event[] = [
   {
-    id: 'shivohum-shiv-mela-2026',
-    title: 'SHIVOHUM SHIV MELA',
-    date: '2026-02-21',
-    time: '12:30 PM - 4:30 PM',
-    venue: "Tudor Park Sports & Leisure, Browell's Lane, FELTHAM, TW13 7EF",
-    description:
-      'Join Sanatan Spirituality Foundation for Shivohum Shiv Mela — a devotional gathering celebrating Lord Shiva with bhajans, darshan, and community.',
-    category: 'Festival',
-    image_url: '/shivohum-shiv-mela.png',
-    registration_link: '',
-    is_featured: true,
-    status: 'upcoming',
-    created_at: '2026-02-16T00:00:00Z',
-  },
-  {
     id: 'shivohum-mahashivratri-mela-2026',
     title: 'SHIVOHUM MAHASHIVRATRI MELA',
     date: '2026-02-21',
@@ -30,7 +15,7 @@ const STATIC_EVENTS: Event[] = [
     category: 'Festival',
     image_url: '/shivohum-mahashivratri-mela.png',
     registration_link: '',
-    is_featured: false,
+    is_featured: true,
     status: 'upcoming',
     created_at: '2026-02-16T00:00:00Z',
   },
