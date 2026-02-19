@@ -173,17 +173,17 @@ export default function Team() {
               />
               <div className="p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
-                  ACHARYA ABHI YOGI JI
+                  ACHARYA ABHIYOGI
                 </h3>
                 <p className="text-lg text-primary font-semibold text-center mb-6">
-                  FOUNDER, SANATAN SPIRITUALITY FOUNDATION
+                  FOUNDER & PRESIDENT, SANATAN SPIRITUALITY FOUNDATION
                 </p>
                 <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
                   <p>
-                    Acharya Abhi Yogi Ji is the Founder of Sanatan Spirituality Foundation and Co-founder of Sumarti Ashram in Bharat. A dedicated Sanatan Dharma guide and spiritual educator, he leads initiatives for Vedic and Sanatan education across the UK, Bharat, and the USA.
+                    Acharya Abhi Yogi is the Founder of Sanatan Spirituality Foundation and Co-founder of Sumarti Ashram in Bharat, working alongside Jagadguru Swami Sandeepani ji Maharaj. A dedicated Sanatan Dharma guide and spiritual educator, he leads multiple initiatives for Vedic and Sanatan education across the UK, Bharat, and the USA.
                   </p>
                   <p>
-                    For over a decade he has been a Kundalini Yogi, freely teaching this sacred science to seekers. Through Sanatan Gurukul and Simply Sanatan, he promotes Shastras, Sanskrit, and spiritual literacy for children and adults — ensuring Sanatan and Vedic wisdom reaches every seeker.
+                    For over a decade, he has been a Kundalini Yogi, freely teaching this sacred and hidden science to seekers around the world. Through his Sanatan Gurukul and Simply Sanatan platforms, he promotes Shastras, Sanskrit learning, Sanatan values, and spiritual literacy for children and adults. His mission is to ensure Sanatan and Vedic literacy for every Sanatani child and to spread the understanding that the true purpose of life is understood & begins after spiritual awakening and self-realisation.
                   </p>
                 </div>
               </div>
