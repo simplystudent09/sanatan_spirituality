@@ -185,7 +185,7 @@ export default function Home() {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-16" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
             {pillars.map((pillar, index) => (
               <div
                 key={index}
@@ -194,15 +194,15 @@ export default function Home() {
                   animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
                 }}
               >
-                <div className="relative bg-pageBg p-8 rounded-full aspect-square flex flex-col items-center justify-center border-4 border-maroon group-hover:border-primary transition-all duration-500 shadow-xl group-hover:shadow-primary/30">
+                <div className="relative bg-pageBg p-4 sm:p-6 rounded-full aspect-square flex flex-col items-center justify-center border-3 sm:border-4 border-maroon group-hover:border-primary transition-all duration-500 shadow-xl group-hover:shadow-primary/30">
                   <div className="absolute inset-0 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-all duration-500" />
-                  <p className="text-6xl md:text-7xl text-primary font-bold mb-2 relative z-10 devanagari">
+                  <p className="text-4xl sm:text-5xl md:text-6xl text-primary font-bold mb-1 sm:mb-2 relative z-10 devanagari">
                     {pillar.name}
                   </p>
-                  <p className="text-xl text-gray-900 font-semibold relative z-10">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-900 font-semibold relative z-10">
                     {pillar.translation}
                   </p>
-                  <p className="text-sm text-gray-600 mt-2 relative z-10">
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2 relative z-10">
                     {pillar.description}
                   </p>
                 </div>
