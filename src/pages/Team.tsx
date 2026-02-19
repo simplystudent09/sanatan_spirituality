@@ -79,11 +79,13 @@ export default function Team() {
       <section className="py-16 bg-pageBg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <img
-              src="/our-story-community.png"
-              alt="Sanatan Spirituality Foundation community"
-              className="w-full rounded-2xl border-2 border-maroon shadow-2xl object-cover"
-            />
+            <div className="max-w-2xl mx-auto">
+              <img
+                src="/our-story-community.png"
+                alt="Sanatan Spirituality Foundation community"
+                className="w-full max-h-[320px] rounded-2xl border-2 border-maroon shadow-2xl object-cover"
+              />
+            </div>
             <div className="mt-10 max-w-3xl mx-auto space-y-6">
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-left">
                 In 2022, a sacred seed was planted in the UK — a seed rooted in Sanatan Dharma, culture, and spiritual awakening — and it blossomed into Sanatan Sanstha of UK, not merely an organization but a living movement. Our journey began with a historic celebration of Geeta Jayanti inside the halls of the UK Parliament, where the timeless wisdom of the Bhagavad Gita echoed through a space that shapes modern governance, symbolizing a powerful meeting of ancient dharma and contemporary society. From there, the momentum only grew. We launched Sanatan Gurukul to nurture the next generation through Hindi, Sanskrit, scriptures, and Vedic values, with three successful batches graduating and children across the UK discovering not just language but identity, mantra, and meaning. Alongside this, free Kundalini Yoga has been offered for over a decade, ensuring spirituality is not just spoken about — it is practiced and experienced.
@@ -103,7 +105,7 @@ export default function Team() {
               <img
                 src="/swami_ji_maharaj.png"
                 alt="Jagadguru Swami Sandeepani Ji Maharaj"
-                className="w-full object-contain"
+                className="w-full max-h-[340px] object-cover object-top"
               />
               <div className="p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
@@ -121,6 +123,66 @@ export default function Team() {
                   </p>
                   <p>
                     Swami Ji's mission transcends religious boundaries. His vision is to awaken humanity to its highest potential — to the realization that divinity is not somewhere distant, but dwelling within every heart. His teachings gently dissolve ignorance and fear, awakening inner peace, clarity, and spiritual purpose.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
+              <img
+                src="/photo_5807747553699761772_x.jpg"
+                alt="Acharya Abhi Yogi Ji"
+                className="w-full max-h-[340px] object-cover object-top"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
+                  ACHARYA ABHI YOGI JI
+                </h3>
+                <p className="text-lg text-primary font-semibold text-center mb-6">
+                  FOUNDER, SANATAN SPIRITUALITY FOUNDATION
+                </p>
+                <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
+                  <p>
+                    Acharya Abhi Yogi Ji is the Founder of Sanatan Spirituality Foundation and Co-founder of Sumarti Ashram in Bharat. A dedicated Sanatan Dharma guide and spiritual educator, he leads initiatives for Vedic and Sanatan education across the UK, Bharat, and the USA.
+                  </p>
+                  <p>
+                    For over a decade he has been a Kundalini Yogi, freely teaching this sacred science to seekers. Through Sanatan Gurukul and Simply Sanatan, he promotes Shastras, Sanskrit, and spiritual literacy for children and adults — ensuring Sanatan and Vedic wisdom reaches every seeker.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
+              <img
+                src="/shivohum-mahashivratri-mela.png"
+                alt="Sanatan community and events"
+                className="w-full max-h-[340px] object-cover object-center"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
+                  OUR SANGAM &amp; SEVA
+                </h3>
+                <p className="text-lg text-primary font-semibold text-center mb-6">
+                  COMMUNITY, EVENTS &amp; DHARMIC SERVICE
+                </p>
+                <div className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
+                  <p>
+                    Our community comes together through sacred events — from Geeta Jayanti at the UK Parliament and Santon Ki Vaani at the Nehru Centre to the Shivoham Shiv Mela and the upcoming Shivoham Shiva Festival 2026. Over 5,000 members have been touched by these gatherings.
+                  </p>
+                  <p>
+                    With Sanatan Gurukul batches, Rudra Abhishek training at Shravanabhava Ashram, and expansion into the USA and Sumarti Ashram in Odisha, we blend ज्ञान, भक्ति, and सेवा — so that the next generation carries forward the light of Sanatan Dharma.
                   </p>
                 </div>
               </div>
