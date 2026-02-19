@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, Youtube } from 'lucide-react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,6 +64,35 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-4">
+            <div className="flex items-center space-x-3 mr-2">
+              <a
+                href="https://facebook.com/ssfconnect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                aria-label="Facebook"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="https://instagram.com/ssfconnect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://youtube.com/@abhiyogishow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                aria-label="YouTube"
+              >
+                <Youtube size={18} />
+              </a>
+            </div>
             <Link
               to="/join"
               className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primaryHover transition-colors duration-300 font-medium"
@@ -95,6 +124,35 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <div className="flex items-center justify-center space-x-4 my-6">
+              <a
+                href="https://facebook.com/ssfconnect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://instagram.com/ssfconnect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://youtube.com/@abhiyogishow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                aria-label="YouTube"
+              >
+                <Youtube size={20} />
+              </a>
+            </div>
             <Link
               to="/join"
               className="block mt-4 bg-primary text-white px-6 py-3 rounded-full hover:bg-primaryHover transition-colors duration-300 text-center font-medium"
