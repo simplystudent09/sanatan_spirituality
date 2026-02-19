@@ -28,6 +28,7 @@ function App() {
           <Route path="/upcoming-events" element={<UpcomingEvents />} />
           <Route path="/join" element={<JoinForm />} />
           <Route path="/team" element={<Team />} />
+          <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
       </div>
