@@ -298,6 +298,22 @@ export default function Home() {
       </section>
 
       <section className="py-12 md:py-20 bg-pageBg">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
+            Our Proud Sponsors and Partners
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-12" />
+          <div className="max-w-6xl mx-auto">
+            <img
+              src="/WhatsApp_Image_2026-02-18_at_14.31.14.jpeg"
+              alt="Our Proud Sponsors and Partners"
+              className="w-full h-auto rounded-xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 bg-pageBg">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Begin Your Spiritual Journey Today
