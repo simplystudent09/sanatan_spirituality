@@ -33,12 +33,20 @@ export default function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center gap-4">
             <img
               src="/logo.png"
               alt="Sanatan Spirituality Foundation"
               className="h-12 md:h-14 w-auto object-contain"
             />
+            <div className="hidden md:flex flex-col">
+              <span className="text-white text-xl md:text-2xl font-bold leading-tight">
+                Sanatan Spirituality
+              </span>
+              <span className="text-primary text-lg md:text-xl font-semibold leading-tight">
+                Foundation
+              </span>
+            </div>
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8">
