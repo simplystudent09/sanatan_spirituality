@@ -33,17 +33,17 @@ export default function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-4">
+          <Link to="/" className="flex items-center gap-3 md:gap-4">
             <img
               src="/logo.png"
               alt="Sanatan Spirituality Foundation"
-              className="h-12 md:h-14 w-auto object-contain"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
             />
-            <div className="hidden md:flex flex-col">
-              <span className="text-white text-xl md:text-2xl font-bold leading-tight">
+            <div className="flex flex-col">
+              <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight">
                 Sanatan Spirituality
               </span>
-              <span className="text-primary text-lg md:text-xl font-semibold leading-tight">
+              <span className="text-primary text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-tight">
                 Foundation
               </span>
             </div>
