@@ -97,7 +97,7 @@ export default function Team() {
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
               <div className="flex items-center justify-center bg-gray-100 min-h-[320px] max-h-[380px] p-4">
                 <img
-                  src="/swami_ji_maharaj.png"
+                  src="/Screenshot_2026-02-20_at_10.58.10.png"
                   alt="Jagadguru Swami Sandeepani Ji Maharaj"
                   className="max-w-full max-h-[340px] w-auto h-auto object-contain"
                 />
