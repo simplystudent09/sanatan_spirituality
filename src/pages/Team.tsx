@@ -97,7 +97,7 @@ export default function Team() {
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
               <div className="w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[560px] overflow-hidden">
                 <img
-                  src="/swami-ji-new.png"
+                  src="/Screenshot_2026-02-20_at_10.58.10 copy.png"
                   alt="Jagadguru Swami Sandeepani Ji Maharaj"
                   className="w-full h-full object-cover"
                 />
