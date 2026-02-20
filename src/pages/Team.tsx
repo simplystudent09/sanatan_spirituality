@@ -117,7 +117,7 @@ export default function Team() {
                     Revered as a Purna Sant (Realized Master), Swami Ji embodies the harmony of ज्ञान (wisdom), भक्ति (devotion), and सेवा (selfless service). His life is not a journey of words, but of inner awakening — a path carved through tapasya, compassion, and divine insight. Each discourse of his breathes the fragrance of the Upanishads — timeless, luminous, and liberating.
                   </p>
                   <p>
-                    Swami Ji's mission transcends religious boundaries. His vision is to awaken humanity to its highest potential — to the realization that divinity is not somewhere distant, but dwelling within every heart. His teachings gently dissolve ignorance and fear, awakening inner peace, clarity, and spiritual purpose. The foundation is blessed to have Jagadguru Swami Ji as our guiding force.
+                    Swami Ji's mission transcends religious boundaries. His vision is to awaken humanity to its highest potential, the realization that divinity is not somewhere distant, but dwelling within every heart. His teachings gently dissolve ignorance and fear, awakening inner peace, clarity, and spiritual purpose. The foundation is blessed to have Jagadguru Swami Ji as our guiding force.
                   </p>
                 </div>
               </div>
