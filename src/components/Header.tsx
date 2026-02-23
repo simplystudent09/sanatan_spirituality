@@ -20,6 +20,7 @@ export default function Header() {
     { to: '/', label: 'Home' },
     { to: '/what-we-done', label: "What We've Done" },
     { to: '/upcoming-events', label: 'Upcoming Events' },
+    { to: '/events-press', label: 'Events Press' },
     { to: '/team', label: 'Our Story' },
   ];
 
