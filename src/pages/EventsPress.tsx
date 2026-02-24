@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
-import { Newspaper, Calendar, ExternalLink } from 'lucide-react';
+import { Newspaper, Calendar, ExternalLink, X, ChevronLeft } from 'lucide-react';
 
 interface PressArticle {
   id: string;
@@ -10,12 +10,15 @@ interface PressArticle {
   excerpt: string;
   url: string;
   image_url?: string;
+  full_content?: string;
+  additional_images?: string[];
   created_at: string;
 }
 
 export default function EventsPress() {
   const [articles, setArticles] = useState<PressArticle[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedArticle, setSelectedArticle] = useState<PressArticle | null>(null);
 
   useEffect(() => {
     fetchPressArticles();
@@ -50,10 +53,127 @@ export default function EventsPress() {
     });
   };
 
+  const renderFullContent = (content: string) => {
+    const lines = content.split('\n');
+    return lines.map((line, index) => {
+      // Handle headings
+      if (line.startsWith('## ')) {
+        return (
+          <h2 key={index} className="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">
+            {line.substring(3)}
+          </h2>
+        );
+      }
+      // Handle bullet points
+      if (line.trim().startsWith('- **')) {
+        const match = line.match(/- \*\*(.*?)\*\*:\s*(.*)/);
+        if (match) {
+          return (
+            <li key={index} className="mb-2">
+              <span className="font-bold text-gray-900">{match[1]}</span>: {match[2]}
+            </li>
+          );
+        }
+      }
+      // Handle empty lines
+      if (line.trim() === '') {
+        return <div key={index} className="h-4" />;
+      }
+      // Handle regular paragraphs
+      return (
+        <p key={index} className="text-gray-700 text-lg leading-relaxed mb-4">
+          {line}
+        </p>
+      );
+    });
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-pageBg flex items-center justify-center">
         <div className="text-primary text-2xl">Loading press coverage...</div>
+      </div>
+    );
+  }
+
+  // If an article is selected, show full article view
+  if (selectedArticle) {
+    return (
+      <div className="min-h-screen bg-pageBg pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-5xl">
+          <button
+            onClick={() => setSelectedArticle(null)}
+            className="inline-flex items-center gap-2 text-primary hover:text-primaryHover font-semibold mb-6 transition-colors duration-300 group"
+          >
+            <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform duration-300" />
+            Back to All Articles
+          </button>
+
+          <article className="bg-white rounded-2xl overflow-hidden border-2 border-maroon shadow-2xl">
+            {selectedArticle.image_url && (
+              <div className="relative h-64 md:h-96 overflow-hidden bg-gray-100">
+                <img
+                  src={selectedArticle.image_url}
+                  alt={selectedArticle.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+            )}
+
+            <div className="p-6 md:p-12">
+              <div className="flex items-center gap-2 text-sm text-primary font-semibold mb-4">
+                <Calendar size={16} />
+                <time dateTime={selectedArticle.date}>{formatDate(selectedArticle.date)}</time>
+              </div>
+
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                {selectedArticle.title}
+              </h1>
+
+              <p className="text-lg text-gray-600 font-medium mb-8 flex items-center gap-2">
+                <Newspaper size={18} />
+                {selectedArticle.publication}
+              </p>
+
+              <div className="prose prose-lg max-w-none">
+                {selectedArticle.full_content ? (
+                  <div className="text-gray-700">
+                    {renderFullContent(selectedArticle.full_content)}
+                  </div>
+                ) : (
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    {selectedArticle.excerpt}
+                  </p>
+                )}
+              </div>
+
+              {selectedArticle.url && (
+                <div className="mt-12 pt-8 border-t-2 border-gray-200">
+                  <a
+                    href={selectedArticle.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primaryHover font-semibold transition-colors duration-300 group/link text-lg"
+                  >
+                    <span>Visit Official Website</span>
+                    <ExternalLink size={20} className="group-hover/link:translate-x-1 transition-transform duration-300" />
+                  </a>
+                </div>
+              )}
+            </div>
+          </article>
+
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setSelectedArticle(null)}
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primaryHover transition-colors duration-300 font-semibold"
+            >
+              <ChevronLeft size={20} />
+              View More Articles
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
@@ -123,15 +243,13 @@ export default function EventsPress() {
                       {article.excerpt}
                     </p>
 
-                    <a
-                      href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={() => setSelectedArticle(article)}
                       className="inline-flex items-center gap-2 text-primary hover:text-primaryHover font-semibold transition-colors duration-300 group/link"
                     >
                       <span>Read Full Article</span>
-                      <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform duration-300" />
-                    </a>
+                      <ChevronLeft size={16} className="rotate-180 group-hover/link:translate-x-1 transition-transform duration-300" />
+                    </button>
                   </div>
                 </article>
               ))}
