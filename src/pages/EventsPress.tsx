@@ -26,19 +26,30 @@ export default function EventsPress() {
 
   const fetchPressArticles = async () => {
     if (!supabase) {
+      console.error('Supabase client is not initialized');
       setLoading(false);
       return;
     }
     try {
+      console.log('Fetching press articles from Supabase...');
       const { data, error } = await supabase
         .from('press_articles')
         .select('*')
         .order('date', { ascending: false });
 
-      if (error) throw error;
-      if (data) setArticles(data);
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
+
+      console.log('Fetched articles:', data?.length || 0);
+      if (data) {
+        console.log('Articles data:', data);
+        setArticles(data);
+      }
     } catch (error) {
       console.error('Error fetching press articles:', error);
+      console.error('Error details:', JSON.stringify(error, null, 2));
     } finally {
       setLoading(false);
     }
