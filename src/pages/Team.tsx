@@ -95,12 +95,19 @@ export default function Team() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-pageBg rounded-2xl border-2 border-maroon shadow-2xl overflow-hidden">
-              <div className="w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[560px] overflow-hidden bg-gray-50">
-                <img
-                  src="/IMG_8033_new.jpg"
-                  alt="Jagadguru Swami Sandeepani Ji Maharaj"
-                  className="w-full h-full object-contain"
-                />
+              <div className="w-full p-4 md:p-6 bg-white">
+                <div className="relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-xl blur opacity-25"></div>
+                  <div className="relative bg-white p-2 md:p-3 rounded-xl shadow-xl">
+                    <div className="h-[320px] sm:h-[400px] md:h-[480px] lg:h-[560px] overflow-hidden rounded-lg bg-gray-50">
+                      <img
+                        src="/IMG_8033_new.jpg"
+                        alt="Jagadguru Swami Sandeepani Ji Maharaj"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
