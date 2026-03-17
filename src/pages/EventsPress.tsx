@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
-import { Newspaper, Calendar, ExternalLink, X, ChevronLeft } from 'lucide-react';
+import { Newspaper, Calendar, ExternalLink, ChevronLeft } from 'lucide-react';
 
 interface PressArticle {
   id: string;
