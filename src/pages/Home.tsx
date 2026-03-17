@@ -158,12 +158,17 @@ export default function Home() {
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-center max-w-3xl mx-auto px-4">
             With a track record of high quality, well organised, and impactful devotional events, SSF is trusted by devotees, families, and partner organisations alike.
           </p>
-          <div className="mt-12 flex justify-center">
-            <img
-              src="/ssuk-ssf-announcement.png"
-              alt="Sanatan Sanstha of UK (SSUK) is now global as Sanatan Spirituality Foundation - USA, UK, Bharat"
-              className="max-w-2xl w-full mx-auto rounded-xl shadow-lg object-cover"
-            />
+          <div className="mt-12 flex justify-center px-4">
+            <div className="relative max-w-4xl w-full">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-2xl blur opacity-30"></div>
+              <div className="relative bg-white p-2 md:p-4 rounded-2xl shadow-2xl">
+                <img
+                  src="/IMG_8033_announcement.jpg"
+                  alt="Sanatan Sanstha of UK (SSUK) is now global as Sanatan Spirituality Foundation - USA, UK, Bharat"
+                  className="w-full h-auto rounded-xl object-cover shadow-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
