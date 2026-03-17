@@ -163,7 +163,7 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-2xl blur opacity-30"></div>
               <div className="relative bg-white p-2 md:p-4 rounded-2xl shadow-2xl">
                 <img
-                  src="/IMG_8033_announcement.jpg"
+                  src="/Sanatan_Spirituality_Team.jpg"
                   alt="Sanatan Sanstha of UK (SSUK) is now global as Sanatan Spirituality Foundation - USA, UK, Bharat"
                   className="w-full h-auto rounded-xl object-cover shadow-lg"
                 />
