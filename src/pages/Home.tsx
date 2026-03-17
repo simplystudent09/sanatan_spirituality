@@ -95,8 +95,12 @@ export default function Home() {
             संस्कार से संस्कृति तक
           </p>
 
-          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto px-4">
+          <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto px-4">
             Preserving ancient wisdom, illuminating modern paths to spiritual enlightenment
+          </p>
+
+          <p className="text-base md:text-lg text-gray-300 mb-12 max-w-3xl mx-auto px-4 italic">
+            under the guidance of the youngest and first Paramhans of United Kingdom, Paramhans Yogi Abhinav Ji
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
