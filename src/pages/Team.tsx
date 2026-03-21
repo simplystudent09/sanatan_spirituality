@@ -144,7 +144,7 @@ export default function Team() {
               />
               <div className="p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
-                  PARAMHANS YOGI ABHINAV JI
+                  PARAMHANS YOGI ABHINAV JI MAHARAJ
                 </h3>
                 <p className="text-lg text-primary font-semibold text-center mb-6">
                   FOUNDER & PRESIDENT, SANATAN SPIRITUALITY FOUNDATION
