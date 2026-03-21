@@ -61,7 +61,7 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  London, UK
+                  Head Office : London & Delhi
                 </span>
               </li>
               <li className="flex items-center space-x-3">
