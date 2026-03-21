@@ -101,7 +101,7 @@ export default function Team() {
                   <div className="relative bg-white p-2 md:p-3 rounded-xl shadow-xl">
                     <div className="h-[320px] sm:h-[400px] md:h-[480px] lg:h-[560px] overflow-hidden rounded-lg bg-gray-50">
                       <img
-                        src="/IMG_8033_new.jpg"
+                        src="/swami_ji_maharaj.png"
                         alt="Jagadguru Swami Sandeepani Ji Maharaj"
                         className="w-full h-full object-contain"
                       />
