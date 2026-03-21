@@ -48,8 +48,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/events-press" onClick={() => window.scrollTo(0, 0)} className="text-gray-300 hover:text-primary transition-colors duration-300">
+                  Events & Press
+                </Link>
+              </li>
+              <li>
                 <Link to="/team" onClick={() => window.scrollTo(0, 0)} className="text-gray-300 hover:text-primary transition-colors duration-300">
                   Our Story
+                </Link>
+              </li>
+              <li>
+                <Link to="/join" onClick={() => window.scrollTo(0, 0)} className="text-gray-300 hover:text-primary transition-colors duration-300">
+                  Join Us
                 </Link>
               </li>
             </ul>
