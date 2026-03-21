@@ -100,7 +100,7 @@ export default function Home() {
           </p>
 
           <p className="text-base md:text-lg text-gray-300 mb-12 max-w-3xl mx-auto px-4 italic">
-            under the guidance of the youngest and first Paramhans of United Kingdom, Paramhans Yogi Abhinav Ji
+            under the guidance of the youngest and first Paramhans of United Kingdom, Paramhans Yogi Abhinav Ji Maharaj
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
@@ -188,7 +188,7 @@ export default function Home() {
           </div>
           <div className="max-w-3xl mx-auto px-4">
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-left">
-              The vision of Sanatan Spirituality Foundation (SSF), founded by Paramhans Yogi Abhinav Ji, is rooted in the timeless principles of Sanatan Dharma — to awaken inner consciousness and guide society toward authentic spiritual living. Under his mentorship, SSF has become a dynamic platform for spiritual revival, organising deeply transformative events, Kundalini meditation workshops, and sacred practices that nurture both devotion and self-realisation. Through powerful knowledge-sharing across Instagram, YouTube, and Facebook, meaningful podcasts with spiritually awakened guests, and structured workshops, the foundation continues to expand its reach globally. Teaching children the sacred practice of Rudra Abhishek, introducing Sanskrit and Vedic wisdom to young minds, and offering correct spiritual guidance are not just activities — they are living expressions of SSF's mission to preserve, practice, and pass on the eternal light of Sanatan spirituality.
+              The vision of Sanatan Spirituality Foundation (SSF), founded by Paramhans Yogi Abhinav Ji Maharaj, is rooted in the timeless principles of Sanatan Dharma — to awaken inner consciousness and guide society toward authentic spiritual living. Under his mentorship, SSF has become a dynamic platform for spiritual revival, organising deeply transformative events, Kundalini meditation workshops, and sacred practices that nurture both devotion and self-realisation. Through powerful knowledge-sharing across Instagram, YouTube, and Facebook, meaningful podcasts with spiritually awakened guests, and structured workshops, the foundation continues to expand its reach globally. Teaching children the sacred practice of Rudra Abhishek, introducing Sanskrit and Vedic wisdom to young minds, and offering correct spiritual guidance are not just activities — they are living expressions of SSF's mission to preserve, practice, and pass on the eternal light of Sanatan spirituality.
             </p>
           </div>
         </div>

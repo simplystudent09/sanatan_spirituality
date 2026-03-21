@@ -26,7 +26,7 @@ const STATIC_EVENTS: Event[] = [
     time: '8:30 PM',
     venue: 'Online - Google Meet',
     description:
-      '100% FREE Kundalini Yoga with Paramhans Yogi Abhinav Ji. Start your journey towards Inner Peace & your realisation. Includes Breathing & Relaxation Techniques along with Yogic Kriyas to elevate the Kundalini Experience. Every Wednesday at 8:30 PM.',
+      '100% FREE Kundalini Yoga with Paramhans Yogi Abhinav Ji Maharaj. Start your journey towards Inner Peace & your realisation. Includes Breathing & Relaxation Techniques along with Yogic Kriyas to elevate the Kundalini Experience. Every Wednesday at 8:30 PM.',
     category: 'Meditation',
     image_url: '/Minimalist_Yoga_Class_Training_for_Beginners_Instagram_Post.png',
     registration_link: '',
