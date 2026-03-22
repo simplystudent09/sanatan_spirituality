@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
-import { Newspaper, Calendar, ExternalLink, ChevronLeft } from 'lucide-react';
+import { Newspaper, Calendar, ExternalLink, ChevronLeft, X, Mail, User, MessageSquare, Send } from 'lucide-react';
 
 interface PressArticle {
   id: string;
@@ -20,6 +20,14 @@ export default function EventsPress() {
   const [articles, setArticles] = useState<PressArticle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedArticle, setSelectedArticle] = useState<PressArticle | null>(null);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    organization: '',
+    message: ''
+  });
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     fetchPressArticles();
@@ -63,6 +71,37 @@ export default function EventsPress() {
       month: 'long',
       year: 'numeric'
     });
+  };
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitStatus('sending');
+
+    try {
+      const { error } = await supabase
+        .from('media_inquiries')
+        .insert([
+          {
+            name: contactForm.name,
+            email: contactForm.email,
+            organization: contactForm.organization,
+            message: contactForm.message,
+            created_at: new Date().toISOString()
+          }
+        ]);
+
+      if (error) throw error;
+
+      setSubmitStatus('success');
+      setTimeout(() => {
+        setShowContactModal(false);
+        setContactForm({ name: '', email: '', organization: '', message: '' });
+        setSubmitStatus('idle');
+      }, 2000);
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      setSubmitStatus('error');
+    }
   };
 
   const renderFullContent = (content: string) => {
@@ -308,15 +347,137 @@ export default function EventsPress() {
             <p className="text-gray-700 text-lg mb-8 leading-relaxed">
               For press inquiries, interviews, or to cover our events, please reach out to our media team. We welcome opportunities to share our mission and the timeless wisdom of Sanatan Dharma.
             </p>
-            <a
-              href="mailto:ssukconnect@gmail.com"
+            <button
+              onClick={() => setShowContactModal(true)}
               className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primaryHover transition-colors duration-300 font-semibold text-lg"
             >
               Contact Media Team
-            </a>
+            </button>
           </div>
         </div>
       </section>
+
+      {showContactModal && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border-2 border-maroon shadow-2xl animate-slideUp">
+            <div className="sticky top-0 bg-white border-b-2 border-maroon p-6 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Mail className="text-primary" size={32} />
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  Media Inquiry
+                </h2>
+              </div>
+              <button
+                onClick={() => setShowContactModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors duration-300"
+              >
+                <X size={28} />
+              </button>
+            </div>
+
+            <form onSubmit={handleContactSubmit} className="p-6 md:p-8 space-y-6">
+              <p className="text-gray-700 text-lg">
+                Please fill out the form below and we'll get back to you as soon as possible.
+              </p>
+
+              <div>
+                <label className="flex items-center gap-2 text-gray-900 font-semibold mb-2">
+                  <User size={18} />
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={contactForm.name}
+                  onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-primary focus:outline-none transition-colors duration-300"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label className="flex items-center gap-2 text-gray-900 font-semibold mb-2">
+                  <Mail size={18} />
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  required
+                  value={contactForm.email}
+                  onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-primary focus:outline-none transition-colors duration-300"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="flex items-center gap-2 text-gray-900 font-semibold mb-2">
+                  <Newspaper size={18} />
+                  Organization
+                </label>
+                <input
+                  type="text"
+                  value={contactForm.organization}
+                  onChange={(e) => setContactForm({ ...contactForm, organization: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-primary focus:outline-none transition-colors duration-300"
+                  placeholder="Publication or organization name (optional)"
+                />
+              </div>
+
+              <div>
+                <label className="flex items-center gap-2 text-gray-900 font-semibold mb-2">
+                  <MessageSquare size={18} />
+                  Message
+                </label>
+                <textarea
+                  required
+                  value={contactForm.message}
+                  onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                  rows={6}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-primary focus:outline-none transition-colors duration-300 resize-none"
+                  placeholder="Please share details about your inquiry..."
+                />
+              </div>
+
+              {submitStatus === 'success' && (
+                <div className="bg-green-50 border-2 border-green-500 text-green-800 px-4 py-3 rounded-xl">
+                  Thank you for your inquiry. We'll be in touch soon!
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="bg-red-50 border-2 border-red-500 text-red-800 px-4 py-3 rounded-xl">
+                  There was an error submitting your inquiry. Please try again or email us directly at ssukconnect@gmail.com
+                </div>
+              )}
+
+              <div className="flex gap-4 pt-4">
+                <button
+                  type="button"
+                  onClick={() => setShowContactModal(false)}
+                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors duration-300 font-semibold"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={submitStatus === 'sending'}
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl hover:bg-primaryHover transition-colors duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {submitStatus === 'sending' ? (
+                    'Sending...'
+                  ) : (
+                    <>
+                      <Send size={18} />
+                      Send Inquiry
+                    </>
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       <style>{`
         @keyframes fadeInUp {
@@ -328,6 +489,21 @@ export default function EventsPress() {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .animate-slideUp {
+          animation: slideUp 0.3s ease-out;
         }
 
         .line-clamp-2 {
