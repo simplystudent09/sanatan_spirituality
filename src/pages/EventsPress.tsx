@@ -159,6 +159,20 @@ export default function EventsPress() {
                 )}
               </div>
 
+              {selectedArticle.additional_images && selectedArticle.additional_images.length > 0 && (
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {selectedArticle.additional_images.map((imageUrl, index) => (
+                    <div key={index} className="rounded-xl overflow-hidden border-2 border-maroon shadow-lg">
+                      <img
+                        src={imageUrl}
+                        alt={`${selectedArticle.title} - Image ${index + 1}`}
+                        className="w-full h-auto object-contain bg-gray-50"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {selectedArticle.url && (
                 <div className="mt-12 pt-8 border-t-2 border-gray-200">
                   <a
