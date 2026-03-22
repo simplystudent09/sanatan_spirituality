@@ -99,7 +99,7 @@ export default function Home() {
             Preserving ancient wisdom, illuminating modern paths to spiritual enlightenment
           </p>
 
-          <p className="text-base md:text-lg text-gray-300 mb-12 max-w-3xl mx-auto px-4 italic">
+          <p className="text-base md:text-lg text-gray-300 mb-12 max-w-3xl mx-auto px-4 italic font-bold">
             under the guidance of the first Paramhans of United Kingdom, Paramhans Yogi Abhinav Ji Maharaj
           </p>
 
