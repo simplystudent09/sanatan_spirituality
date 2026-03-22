@@ -12,6 +12,7 @@ interface PressArticle {
   image_url?: string;
   full_content?: string;
   additional_images?: string[];
+  video_url?: string;
   created_at: string;
 }
 
@@ -158,6 +159,20 @@ export default function EventsPress() {
                   </p>
                 )}
               </div>
+
+              {selectedArticle.video_url && (
+                <div className="mt-12">
+                  <div className="rounded-xl overflow-hidden border-2 border-maroon shadow-lg aspect-video">
+                    <iframe
+                      src={selectedArticle.video_url}
+                      title={selectedArticle.title}
+                      className="w-full h-full"
+                      allowFullScreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    />
+                  </div>
+                </div>
+              )}
 
               {selectedArticle.additional_images && selectedArticle.additional_images.length > 0 && (
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
