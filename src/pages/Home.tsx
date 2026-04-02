@@ -183,7 +183,7 @@ export default function Home() {
             <img
               src="/Untitled_(Facebook_Cover)_(3).png"
               alt="Sanatan Spirituality Foundation Logo"
-              className="w-48 h-48 object-contain"
+              className="w-full max-w-3xl h-auto object-contain"
             />
           </div>
           <div className="max-w-3xl mx-auto px-4">
