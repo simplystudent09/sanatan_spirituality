@@ -181,7 +181,7 @@ export default function Home() {
           <div className="w-24 h-1 bg-primary mx-auto mb-8" />
           <div className="flex justify-center mb-10">
             <img
-              src="/SSF_LOGO_-_WHITE_BG.png"
+              src="/Untitled_(Facebook_Cover)_(3).png"
               alt="Sanatan Spirituality Foundation Logo"
               className="w-48 h-48 object-contain"
             />
